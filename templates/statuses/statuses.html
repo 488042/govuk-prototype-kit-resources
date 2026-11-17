@@ -1,0 +1,63 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Statuses ({{version}}) – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+
+<h1 class="govuk-heading-xl">
+  <span class="govuk-caption-xl">{{version}}</span>
+  Statuses
+</h1>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-visually-hidden">Table showing all status details</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header govuk-!-width-one-half" scope="col">Status and description</th>
+      <th class="govuk-table__header" scope="col">Details</th>
+      <th class="govuk-table__header" scope="col">Data mapping</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <p class="govuk-body"><strong class="govuk-tag govuk-tag--blue">STATE 1</strong></p>
+        <p class="govuk-body-s"><code>[STATE 1 SHORT DESCRIPTION]</code></p>
+      </td>
+      <td class="govuk-table__cell"><code>[STATE 1 DETAILS]</code></td>
+      <td class="govuk-table__cell">Display this status in {{serviceName | lower}} when <code>[STATE 1 DATA MAPPING TRIGGER]</code></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <p class="govuk-body"><strong class="govuk-tag govuk-tag--grey">STATE 2</strong></p>
+        <p class="govuk-body-s"><code>[STATE 2 SHORT DESCRIPTION]</code></p>
+      </td>
+      <td class="govuk-table__cell"><code>[STATE 2 DETAILS]</code></td>
+      <td class="govuk-table__cell">Display this status in {{serviceName | lower}} when <code>[STATE 2 DATA MAPPING TRIGGER]</code></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <p class="govuk-body"><strong class="govuk-tag govuk-tag--yellow">STATE 3</strong></p>
+        <p class="govuk-body-s"><code>[STATE 3 SHORT DESCRIPTION]</code></p>
+      </td>
+      <td class="govuk-table__cell"><code>[STATE 3 DETAILS]</code></td>
+      <td class="govuk-table__cell">Display this status in {{serviceName | lower}} when <code>[STATE 3 DATA MAPPING TRIGGER]</code></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <p class="govuk-body"><strong class="govuk-tag govuk-tag--green">STATE 4</strong></p>
+        <p class="govuk-body-s"><code>[STATE 4 SHORT DESCRIPTION]</code></p>
+      </td>
+      <td class="govuk-table__cell"><code>[STATE 4 DETAILS]</code></td>
+      <td class="govuk-table__cell">Display this status in {{serviceName | lower}} when <code>[STATE 4 DATA MAPPING TRIGGER]</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="govuk-body"><code>[OPTIONAL GUIDANCE AND LINKS]</code></p>
+{% endblock %}

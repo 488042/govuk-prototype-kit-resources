@@ -1,0 +1,678 @@
+/*****
+  * Styles (CSS)
+  * Global service pages (an example government service)
+*****/
+
+/* Expansion on the GOV.UK One Login main service header - to include the 'service' name */
+.app-service-name-header__product-name {
+  font-weight: 400;
+  color: #ffffff;
+  margin-left: 10px;
+}
+@media (max-width: 40.0525em) {
+  .app-service-name-header__product-name {
+    display: block;
+    font-size: 19px;
+    line-height: 1.25;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+.rebranded-one-login-header__link--homepage:focus .app-service-name-header__product-name {
+  color: #0b0c0c;
+}
+
+/* Expansion on the GOV.UK Design System tag component (https://design-system.service.gov.uk/components/tag) to make it display as needed on our home page */
+
+/* Navigation links */
+.govuk-tag--no-break {
+  white-space: normal;
+  max-width: fit-content;
+}
+@media (min-width: 62.5em) {
+  .govuk-tag--no-break {
+    white-space: nowrap;
+  }
+}
+
+/* GOV.UK homepage most viewed list, adapted for a government service */
+.service-name-sub-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 -15px;
+  /* display: grid; */
+  grid-auto-flow: row;
+  grid-template-columns: 1fr
+}
+@media(min-width: 48.0625em) {
+  .service-name-sub-services-list {
+    align-items:center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%
+  }
+  
+  @supports(display: grid) {
+    .service-name-sub-services-list {
+        width:initial
+    }
+  }
+}
+
+.service-name-sub-services-list__item {
+  margin: 0 15px;
+  padding: 0 0 24px
+}
+.service-name-sub-services-list__item a {
+  font-size: 19px;
+  font-size: 1.1875rem
+}
+
+.service-name-sub-services-list__text {
+  display: block;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.service-name-sub-services-list__item:last-of-type {
+   padding-bottom: 0
+}
+
+@media(min-width: 48.0625em) {
+  .service-name-sub-services-list__item {
+    padding-bottom:32px
+  }
+
+  .service-name-sub-services-list__item:last-of-type {
+    padding-bottom: 32px
+  }
+}
+
+.gem-c-action-link__icon {
+  display: table-cell;
+  line-height: 1;
+  width: 36px;
+  vertical-align: middle
+}
+@media(min-width: 40.0625em) {
+  .gem-c-action-link__icon {
+    width:45px
+  }
+}
+
+.gem-c-action-link--large .gem-c-action-link__icon {
+  height: 40px;
+  width: 56px
+}
+
+.gem-c-action-link--large .gem-c-action-link__svg {
+  height: 40px;
+  width: 40px
+}
+
+@media print {
+  .gem-c-action-link * {
+    color: #000 !important
+  }
+
+  .gem-c-action-link .gem-c-action-link__icon {
+    display: none
+  }
+}
+
+.gem-c-action-link__svg {
+  height: 28px;
+  vertical-align: middle;
+  width: 28px
+}
+@media(min-width: 40.0625em) {
+  .gem-c-action-link__svg {
+    height:35px;
+    width: 35px
+  }
+}
+
+.gem-c-action-link__svg .gem-c-action-link__icon__circle {
+  fill: #eeefef
+}
+@media(forced-colors: active) {
+  .gem-c-action-link__svg .gem-c-action-link__icon__circle {
+    fill: LinkText
+  }
+}
+
+.gem-c-action-link__svg .gem-c-action-link__icon__arrow {
+  fill: #000
+}
+@media(forced-colors: active) {
+  .gem-c-action-link__svg .gem-c-action-link__icon__arrow {
+    fill: Canvas
+  }
+}
+
+.gem-c-action-link__icon--simple .gem-c-action-link__svg {
+  height: 25px;
+  width: 25px
+}
+
+.gem-c-action-link__link-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 1.1875rem;
+  line-height: 1.3
+}
+@media print {
+  .gem-c-action-link__link-wrapper {
+    font-family: sans-serif
+  }
+}
+@media print {
+  .gem-c-action-link__link-wrapper {
+    font-size: 14pt;
+    line-height: 1.3
+  }
+}
+
+.service-name-sub-services-list__item-hint {
+  margin-bottom: 0;
+}
+
+/* CSS for the MoJ Design System progress tracker component (https://design-patterns.service.justice.gov.uk/components/progress-tracker) */
+.app-progress-bar {
+  margin-bottom: 40px;
+}
+
+.app-progress-bar__list {
+  font-size: 0;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.app-progress-bar__list::before {
+  border-left: 6px solid #0f7a52;
+  content: "";
+  left: 13px;
+  position: absolute;
+  height: 100%;
+}
+
+.app-progress-bar__item {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  padding-bottom: 0.3rem;
+}
+@media print {
+  .app-progress-bar__item {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .app-progress-bar__item {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+.app-progress-bar__item:first-child::before {
+  border-left: 6px solid #0f7a52;
+  content: "";
+  position: absolute;
+}
+.app-progress-bar__item:last-child::before {
+  border-left: 6px solid #ffffff;
+  content: "";
+  left: 13px;
+  position: absolute;
+  height: 100%;
+}
+
+.app-progress-bar__icon {
+  position: relative;
+  background-color: #ffffff;
+  border: 6px solid #0f7a52;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  margin-right: 0.5rem;
+}
+
+.app-progress-bar__icon--complete {
+  background-color: #0f7a52;
+  position: relative;
+}
+.app-progress-bar__icon--complete::before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-progress-bar__label {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 1.1875rem;
+  line-height: 1.3157894737;
+  display: flex;
+  font-weight: inherit;
+  flex-wrap: wrap;
+  align-content: center;
+}
+@media print {
+  .app-progress-bar__label {
+    font-family: sans-serif;
+  }
+}
+@media print {
+  .app-progress-bar__label {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+/* Expansion on the MoJ Design System sub navigation component (https://design-patterns.service.justice.gov.uk/components/sub-navigation) to make it work for our users */
+.moj-sub-navigation {
+  margin-bottom: 0;
+}
+
+/* Back to top link used on long content pages */
+.gem-c-back-to-top-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.gem-c-back-to-top-link__icon {
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+/* Stacked filter component adapted for a government service prototype */
+.service-name-filter {
+  margin-bottom: 20px;
+}
+
+.service-name-filter--action .govuk-button {
+  background-color: #1d70b8;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.service-name-filter--open .govuk-button {
+  background-color: #1d70b8;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.js-enabled .service-name-filter--button-content {
+  padding-right: 10px;
+}
+
+.service-name-filter .fa {
+  display: none;
+}
+
+.js-enabled .service-name-filter .fa {
+  display: inline-block;
+}
+
+.service-name-filter--content {
+  background-color: #ffffff;
+  border: 2px solid #1d70b8;
+  padding: 20px;
+}
+
+.service-name-filter--content .govuk-button-group,
+.service-name-filter--content .govuk-button,
+.service-name-filter--content .govuk-link {
+  margin-bottom: 0;
+}
+
+.service-name-filter--content .govuk-link {
+  margin-top: 17px;
+}
+
+.app-c-filter-summary--inside {
+  border-bottom: 1px solid #b1b4b6;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.service-name-filter--section-spacer-for-mobile {
+  padding-bottom: 20px;
+}
+
+.app-c-filter-summary {
+  padding-bottom: 5px;
+}
+
+.app-c-filter-summary__heading {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.app-c-filter-summary__remove-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+  margin-block-start: 0;
+  padding: 0;
+}
+
+.app-c-filter-summary__remove-filter {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #1d70b8;
+  border-radius: 0.3125em;
+  color: #0b0c0c;
+  cursor: pointer;
+  display: flex;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+button.app-c-filter-summary__remove-filter {
+  appearance: none;
+}
+
+.app-c-filter-summary__clear-link {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.app-c-filter-summary__remove-filter:focus {
+  background-color: #ffdd00;
+  border-color: #0b0c0c;
+  outline: 2px #0b0c0c solid;
+  outline-offset: 0;
+}
+
+.app-c-filter-summary__remove-filter:hover {
+  border-color: #0b0c0c;
+  outline: 1px #0b0c0c solid;
+  outline-offset: 0;
+}
+
+.app-c-filter-summary__remove-filter::before {
+  content: "\00d7";
+  font-size: 22px;
+  margin-top: 1px;
+  padding-right: 5px;
+}
+
+@media (min-width: 40.0625em) {
+  .service-name-filter--content .govuk-link {
+    margin-top: 0;
+  }
+
+  .service-name-filter--section-spacer-for-mobile {
+    padding-bottom: 0;
+  }
+
+  .app-c-filter-summary__heading {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+
+  .app-c-filter-summary__remove-filter,
+  .app-c-filter-summary__clear-link {
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+  }
+}
+
+@media print {
+  .app-c-filter-summary__remove-filter,
+  .app-c-filter-summary__clear-link {
+    font-family: sans-serif;
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+/* Expansion on the GOV.UK Design System service navigation component (https://design-system.service.gov.uk/components/service-navigation) to make it work in a custom service header */
+
+/* Navigation links */
+@media (min-width: 40.0625em) {
+  .app-service-navigation--right .govuk-service-navigation__list {
+    justify-content: flex-end;
+  }
+
+  .app-service-navigation--right .govuk-service-navigation__item:last-child {
+    margin-right: 15px;
+  }
+}
+
+/* CUSTOM styles added to highlight static content messages where something is overdue (e.g. 'Last updated' is past a reasonable point) */
+.app-service-name-overdue {
+  color: #d4351c;
+}
+
+/* CUSTOM styles added as part of a quick and dirty mock up for some generic review-team views */
+.app-service-name-warning {
+  background: #f47738;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  color: #0b0c0c;
+  display: inline-block;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  height: 20px;
+  line-height: 24px;
+  /* margin-right: 8px; */
+  text-align: center;
+  width: 22px;
+}
+
+.app-service-name-lead-avatar {
+  background: #1d70b8;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+.app-service-name-lead-avatar--empty {
+  background: #ffffff;
+  border: 2px dashed #b1b4b6;
+  color: #505a5f;
+  line-height: 26px;
+}
+
+.app-service-name-team-dots {
+  display: inline-block;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.app-service-name-team-dot {
+  border: 2px solid #b1b4b6;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  margin-right: 2px;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.app-service-name-team-dot--filled {
+  background: #00703c;
+  border-color: #00703c;
+}
+
+.app-service-name-team-full {
+  color: #00703c;
+}
+
+.app-pipeline-calendar {
+  border-top: 1px solid #b1b4b6;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+}
+
+.app-pipeline-calendar__week {
+  border-bottom: 1px solid #b1b4b6;
+  padding: 15px 0;
+}
+
+.app-pipeline-calendar__heading,
+.app-pipeline-calendar__date {
+  margin-bottom: 5px;
+}
+
+.app-pipeline-calendar__events {
+  margin-bottom: 0;
+}
+
+.app-pipeline-calendar__event {
+  border-left: 5px solid #1d70b8;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.app-pipeline-calendar__event--clash {
+  border-left-color: #f47738;
+}
+
+.app-pipeline-calendar__meta {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.app-pipeline-calendar__tag {
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.app-metric-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+.app-metric {
+  border-top: 5px solid #1d70b8;
+  padding-top: 10px;
+}
+
+.app-metric__value {
+  display: block;
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.app-metric__label {
+  display: block;
+  font-family: "GDS Transport", arial, sans-serif;
+}
+
+.app-report-list {
+  border-top: 1px solid #b1b4b6;
+  margin-bottom: 30px;
+}
+
+.app-report-list__row {
+  border-bottom: 1px solid #b1b4b6;
+  padding: 10px 0;
+}
+
+.app-report-list__key,
+.app-report-list__value,
+.app-report-list__hint {
+  margin: 0;
+}
+
+.app-report-list__value {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@media (min-width: 40.0625em) {
+  .app-pipeline-calendar {
+    border-left: 1px solid #b1b4b6;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .app-pipeline-calendar__week {
+    border-right: 1px solid #b1b4b6;
+    padding: 15px;
+  }
+
+  .app-metric-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+.app-assistant-panel {
+  border-top: 5px solid #1d70b8;
+  padding-top: 15px;
+}
+
+.app-assistant-chat {
+  border-bottom: 1px solid #b1b4b6;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.app-assistant-message {
+  border-left: 5px solid #b1b4b6;
+  margin-bottom: 20px;
+  padding: 5px 0 5px 15px;
+}
+
+.app-assistant-message--assistant {
+  border-left-color: #1d70b8;
+}
+
+.app-assistant-message--user {
+  border-left-color: #00703c;
+}
+
+/* Expansion on the MoJ Design System date picker component (https://design-patterns.service.justice.gov.uk/components/date-picker) to make it display better - when using more tham 1 - in our filter sections */
+.moj-datepicker:last-child {
+  padding-top: 10px;
+}
+.app-js-only-inline-flex {
+  display: none !important;
+}
+
+.js-enabled .app-js-only-inline-flex {
+  display: inline-flex !important;
+}

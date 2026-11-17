@@ -1,0 +1,28 @@
+/*****
+  * Print (CSS)
+  * Global - will be applied to all areas of the service  
+*****/
+
+/* Page parameters */
+@page {
+	size: A4 portrait;
+}
+
+/* DOM elements */
+body {
+  width: 100% !important;
+}
+
+table {
+  width: 100%;
+}
+
+/* Classes - GOV.UK Frontend */
+.govuk-phase-banner, .govuk-back-link, .govuk-footer__inline-list {
+  display: none;
+}
+
+/* Classes - example service */
+.print-page, .no-print {
+  display: none !important;
+}

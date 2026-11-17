@@ -1,0 +1,99 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Register for {{serviceName}} – Example account – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Example notification</span>
+      Register for {{serviceName}}
+    </h1>
+
+    <div class="letter-message letter-message-body">
+      <p class="govuk-body govuk-!-font-weight-bold">Example government department</p>
+
+      <div class="govuk-grid-row govuk-!-margin-bottom-8">
+
+        <div class="letter-header">
+
+          <div class="govuk-grid-column-one-half">
+            <p class="govuk-body letter-message-meta">
+              <code>[NAME]</code>
+              <br>
+              <code>[POSITION]</code>, <code>[COMPANY]</code>
+              <br>
+              <code>[ADDRESS LINE 1]</code>
+              <br>
+              <code>[ADDRESS LINE 2]</code>
+              <br>
+              <code>[TOWN OR CITY]</code> <code>[POSTCODE]</code>
+            </p>
+          </div>
+
+          <div class="govuk-grid-column-one-half">
+            <p class="govuk-body letter-message-meta letter-message-last-section">
+              <code>[COMPANY NAME]</code>
+              <br>
+              <code>[ADDRESS LINE 1]</code>
+              <br>
+              <code>[ADDRESS LINE 2]</code>
+              <br>
+              <code>[TOWN OR CITY]</code>
+              <br>
+              <code>[COUNTY]</code> <code>[POSTCODE]</code>
+              <br>
+              Tel: <code>[PHONE NUMBER]</code>
+              <br>
+              <code>[URL]</code>
+            </p>
+          </div>
+
+        </div>
+    
+      </div>
+
+      <div class="letter-message-meta govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+        <p class="govuk-body govuk-!-margin-bottom-0">[DATE]</p>
+        <h2 class="govuk-heading-m">Register for {{serviceName}}</h2>
+        <p class="govuk-body">
+          Your ref: <code>[YOUR REF]</code>
+          <br>
+          Our ref: <code>[OUR REF]</code>
+          <br>
+          Email: <strong class="force-content-break">[EMAIL]</strong>
+          <br>
+        </p>
+        <p class="govuk-body">Dear <code>[NAME]</code>,</p>
+        <p class="govuk-body"><code>[CONTENT]</code></p>
+        <h2 class="govuk-heading-s">Register for {{serviceName}}</h2>
+        <ol class="govuk-list govuk-list--number">
+          <li>Go to: <code>[URL]</code></li>
+          <li>Register for the example service or sign in to an existing account</li>
+          <li>Enter your invitation code <code>[INVITATION CODE]</code></li>
+          <li>Enter your registration case number <code>[REGISTRATION CODE]</code></li>
+        </ol>
+        <p class="govuk-body"><code>[CONTENT]</code></p>
+        <h2 class="govuk-heading-s">About the service</h2>
+        <p class="govuk-body"><code>[CONTENT]</code></p>
+        <p class="govuk-body"><code>[SIGNATURE]</code></p>
+        <p class="govuk-body">
+          <code>[AUTHOR'S NAME]</code>
+          <br>
+          <code>[GOVERNMENT DEPARTMENT]</code>
+          <br>
+          T: <code>[AUTHOR'S TELEPHONE]</code>
+          <br>
+          E: <code>[AUTHOR'S EMAIL]</code>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

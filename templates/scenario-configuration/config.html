@@ -1,0 +1,122 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% set pageName = "Choose your user journey" %}
+{% set bodyClasses = "extra-page-width-1400" %}
+
+{% block content %}
+<style>
+
+  /* Minor workaround to remove the light grey (#f4f8fb) footer due to the content container not having enough in it */
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    height: auto;
+  }
+
+</style>
+
+<div class="govuk-form-group">
+  <a class="govuk-back-link" href="/">Back</a>
+</div>
+
+<h1 class="govuk-heading-xl">
+  <span class="govuk-caption-xl">{{ version or "Example" }}</span>
+  Choose your user journey
+</h1>
+
+<form action="/example/config" method="post" novalidate>
+  <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">User type</legend>
+      
+      <div class="govuk-radios" data-module="govuk-radios" id="userTypeRadios">
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="user_type_1" name="userType" type="radio" value="User 1" checked="checked">
+          <label class="govuk-label govuk-radios__label" for="user_type_1">User 1</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="user_type_2" name="userType" type="radio" value="User 2">
+          <label class="govuk-label govuk-radios__label" for="user_type_2">User 2</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="user_type_3" name="userType" type="radio" value="User 3">
+          <label class="govuk-label govuk-radios__label" for="user_type_3">User 3</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="user_type_4" name="userType" type="radio" value="User 4">
+          <label class="govuk-label govuk-radios__label" for="user_type_4">User 4</label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Entry point</legend>
+    
+      <div class="govuk-radios" data-module="govuk-radios">
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="entry_point_1" name="entryPoint" type="radio" value="Start page on GOV.UK">
+          <label class="govuk-label govuk-radios__label" for="entry_point_1">Start page on GOV.UK</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="entry_point_2" name="entryPoint" type="radio" value="GOV.UK One Login">
+          <label class="govuk-label govuk-radios__label" for="entry_point_2">GOV.UK One Login</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="entry_point_3" name="entryPoint" type="radio" value="Service dashboard" checked="checked">
+          <label class="govuk-label govuk-radios__label" for="entry_point_3">Service dashboard</label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div id="numberOfApplicationsChoices" class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Number of applications</legend>
+      
+      <div class="govuk-radios" data-module="govuk-radios">
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="number_of_applications_1" name="numberOfApplications" type="radio" value="1" disabled>
+          <label class="govuk-label govuk-radios__label" for="number_of_applications_1">1</label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="number_of_applications_2" name="numberOfApplications" type="radio" value="2 to 10 (select an application)">
+          <label class="govuk-label govuk-radios__label" for="number_of_applications_2">2 to 10 (select an application)</label>
+        </div>
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="number_of_applications_3" name="numberOfApplications" type="radio" value="11 or more (select an application with search and pagination)" checked="checked">
+          <label class="govuk-label govuk-radios__label" for="number_of_applications_3">11 or more (select an application with search and pagination)</label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+</form>
+{% endblock %}
+
+{% block pageScripts %}
+<!-- Dynamically control the config options -->
+<script src="/public/javascripts/scenario-config.js"></script>
+{% endblock %}

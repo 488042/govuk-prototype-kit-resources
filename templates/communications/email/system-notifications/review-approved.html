@@ -1,0 +1,56 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Review approved – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Email</span>
+      Review approved
+    </h1>
+
+    <div class="email-message">
+    
+      <table class="email-message-meta">
+        <tbody>
+          <tr>
+            <th scope="row">From</th>
+            <td>{{serviceName}}</td>
+          </tr>
+          <tr>
+            <th scope="row">To</th>
+            <td><code>[EMAIL ADDRESS]</code></td>
+          </tr>
+          <tr class="email-message-meta">
+            <th scope="row">Subject</th>
+            <td>Your review has been approved - <code>[INITIATIVE NAME]</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="email-message-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+        <p class="govuk-body">Dear <code>[USER]</code>,</p>
+        <p class="govuk-body">Your submitted review for <code>[INITIATIVE NAME]</code> has been reviewed and approved by the assigned reviewer, <code>[SENIOR RESPONSIBLE OWNER]</code>.</p>
+        <p class="govuk-body">This confirms that the reviewer has reviewed the risk assessment and is content with the information recorded.</p>
+        <h2 class="govuk-heading-s">Next steps</h2>
+        <ol class="govuk-list govuk-list--number">
+          <li>Sign in to the <a href="#" class="govuk-link">{{serviceName}}</a> service.</li>
+          <li>Find <code>[INITIATIVE NAME]</code> and review the review and next steps.</li>
+        </ol>
+        <p class="govuk-body">
+          Yours sincerely,
+          <br>
+          {{serviceName}}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

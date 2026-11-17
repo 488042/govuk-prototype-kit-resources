@@ -1,0 +1,27 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% set pageName = "Example journey selected" %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Example journey selected</h1>
+<p class="govuk-body">Illustrative entry point: <strong>{{entry}}</strong>. Replace this page with your real journey.</p>
+<dl class="govuk-summary-list">
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">User type</dt>
+    <dd class="govuk-summary-list__value">{{scenario.userType or "Not selected"}}</dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Entry point</dt>
+    <dd class="govuk-summary-list__value">{{scenario.entryPoint or "Not selected"}}</dd>
+  </div>
+  
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Number of applications</dt>
+    <dd class="govuk-summary-list__value">{{scenario.numberOfApplications or "Not applicable"}}</dd>
+  </div>
+
+</dl>
+<p class="govuk-body"><a href="/example/config" class="govuk-link">Change configuration</a></p>
+{% endblock %}

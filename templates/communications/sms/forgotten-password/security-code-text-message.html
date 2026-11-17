@@ -1,0 +1,48 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Security code text message – Example account – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">I’ve forgotten my password</span>
+      Security code text message
+    </h1>
+
+    <div class="email-message">
+    
+      <table class="email-message-meta">
+        <tbody>
+          <tr>
+            <th scope="row">From</th>
+            <td>GOV.UK</td>
+          </tr>
+          <tr>
+            <th scope="row">To</th>
+            <td><span class="placeholder-no-brackets">Mobile number</span></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <div class="email-message-body govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+  
+        <div class="sms-message-wrapper">
+          <p class="govuk-body"><a href="#">[EXAMPLE CODE]</a> is your example service security code.</p>
+          <p class="govuk-body">Your code expires in 15 minutes.</p>
+          <p class="govuk-body"><a href="#">[EXAMPLE CODE]</a> yw eich cod diogelwch example account.</p>
+          <p class="govuk-body">Mae eich cod yn dod i ben mewn 15 munud.</p>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
